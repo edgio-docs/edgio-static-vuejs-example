@@ -1,8 +1,4 @@
 node_modules
-.xdn
+.layer0
 **/dist/**/*
-layer0-sapper-example/__sapper__
-layer0-vue-storefront-example/core/**/*
-layer0-vue-storefront-example/packages/**/*
-layer0-vue-storefront-example/test/**/*
-layer0-vue-storefront-example/src/**/*
+*.vue
