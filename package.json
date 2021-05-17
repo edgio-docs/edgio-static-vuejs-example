@@ -4,6 +4,7 @@
     "layer0:dev": "layer0 dev",
     "layer0:build": "npm run build && layer0 build",
     "layer0:deploy": "npm run build && layer0 deploy layer0-docs",
+    "deploy": "npm run build && layer0 deploy",
     "start": "concurrently --kill-others \"npm run server\" \"npm run dev\"",
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
