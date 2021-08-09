@@ -6,12 +6,12 @@ To get started with this example, run:
 
 ```
 npm i
-npm run layer0:start
+npm run layer0:dev
 ```
 
 and navigate to [http://127.0.0.1:3000](http://127.0.0.1:3000) with your browser to see the result.
 
-To view this example live, visit https://layer0-docs-static-vuejs-example-default.moovweb-edge.io/.
+To view this example live, visit https://layer0-docs-layer0-static-vuejs-example-default.layer0.link/.
 
 ## Deploy on Layer0
 
