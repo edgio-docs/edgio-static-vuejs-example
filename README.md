@@ -4,7 +4,7 @@ This example is built with Vue.js to demonstrate the use and configuration of La
 
 ## Demo
 
-https://layer0-docs-layer0-static-vuejs-example-default.layer0.link
+https://layer0-docs-layer0-static-vuejs-example-default.layer0-limelight.link
 
 ## Try It Now
 
