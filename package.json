@@ -15,14 +15,17 @@
   "dependencies": {
     "core-js": "^3.6.5",
     "register-service-worker": "^1.7.2",
-    "vue": "^3.0.0",
+    "vue": "^3.2.16",
+    "vue-router": "^4.0.12",
+    "whatwg-fetch": "^3.6.2",
     "workbox-webpack-plugin": "^6.2.2"
   },
   "devDependencies": {
-    "@layer0/cli": "^3.16.2",
-    "@layer0/core": "^3.16.2",
-    "@layer0/devtools": "^3.16.2",
-    "@layer0/prefetch": "^3.16.2",
+    "@layer0/cli": "^4.5.0",
+    "@layer0/core": "^4.5.0",
+    "@layer0/devtools": "^4.5.0",
+    "@layer0/prefetch": "^4.5.0",
+    "@layer0/vue": "^4.5.0",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
