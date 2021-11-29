@@ -8,7 +8,7 @@ https://layer0-docs-layer0-static-vuejs-example-default.layer0.link
 
 ## Try It Now
 
-[![Deploy with Layer0](https://a.storyblok.com/f/117912/x/e4e996094a/frame-1.svg)](https://app.layer0.co/deploy?repo=https://github.com/layer0-docs/static-vuejs-example)
+[![Deploy with Layer0](https://a.storyblok.com/f/117912/x/e4e996094a/frame-1.svg)](https://app.layer0.co/deploy?repo=https://github.com/layer0-docs/layer0-static-vuejs-example)
 
 ## Getting Started
 
