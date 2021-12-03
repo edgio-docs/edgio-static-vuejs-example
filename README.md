@@ -1,10 +1,10 @@
-## Vue with Layer0
+## Vue 3 with Layer0
 
 This example is built with Vue.js to demonstrate the use and configuration of Layer0 serving a client-side-rendered application. We utilize the caching and speed optimizations provided by Layer0 to serve static resources that are rendered on the client.
 
 ## Demo
 
-https://layer0-docs-layer0-static-vuejs-example-default.layer0.link
+https://layer0-docs-layer0-static-vuejs-example-default.layer0-limelight.link
 
 ## Try It Now
 
