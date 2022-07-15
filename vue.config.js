@@ -1,15 +1,15 @@
-const { InjectManifest } = require("workbox-webpack-plugin");
+const { InjectManifest } = require('workbox-webpack-plugin')
 
-const config = {}; // Initialize unconditional config
+const config = {}
 
-if (process.env.NODE_ENV === "production") {
-  config["configureWebpack"] = {
+if (process.env.NODE_ENV === 'production') {
+  config['configureWebpack'] = {
     plugins: [
       new InjectManifest({
-        swSrc: "./service-worker.js",
+        swSrc: './service-worker.js',
       }),
     ],
-  };
+  }
 }
 
-module.exports = config;
+module.exports = config
