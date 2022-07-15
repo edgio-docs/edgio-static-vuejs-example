@@ -1,10 +1,11 @@
 {
-  "name": "layer0-vue2-example",
+  "name": "layer0-vue3-example",
   "scripts": {
     "layer0": "layer0",
     "layer0:dev": "layer0 dev",
     "layer0:build": "layer0 build",
     "layer0:deploy": "layer0 deploy",
+    "layer0:prod": "layer0 run -p",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "tailwindcss:watch": "npx tailwindcss -i ./src/input.css -o ./src/compiled/output.css --watch",
