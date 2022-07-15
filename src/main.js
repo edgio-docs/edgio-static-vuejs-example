@@ -13,4 +13,4 @@ import installDevtools from '@layer0/devtools/install'
 
 install()
 installDevtools()
-Layer0RUM('29f61ab4-db8a-4dcc-9412-e1901c6dad61')
+Layer0RUM('789a5742-3d8d-4894-90ec-6ca44b91f914')
