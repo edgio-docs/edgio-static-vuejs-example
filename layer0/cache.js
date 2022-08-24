@@ -1,40 +1,56 @@
-export const API_CACHE_HANDLER = ({ removeUpstreamResponseHeader, cache, proxy }) => {
-  removeUpstreamResponseHeader('cache-control')
+export const API_CACHE_HANDLER = ({ cache, proxy, removeUpstreamResponseHeader }) => {
+  removeUpstreamResponseHeader('set-cookie')
   cache({
+    edge: {
+      maxAgeSeconds: 60 * 60 * 24,
+      // Cache responses even if they contain cache-control: private header
+      // https://docs.layer0.co/guides/caching#private
+      // https://docs.layer0.co/docs/api/core/interfaces/_router_cacheoptions_.edgecacheoptions.html#forceprivatecaching
+      forcePrivateCaching: true,
+    },
     browser: {
-      maxAgeSeconds: 0,
       serviceWorkerSeconds: 60 * 60 * 24,
     },
-    edge: {
-      maxAgeSeconds: 60 * 60 * 24 * 365 * 10,
-      staleWhileRevalidateSeconds: 60 * 60 * 24,
-    },
   })
-  proxy('api')
+  proxy('api', { path: ':path*' })
 }
 
-export const IMAGE_CACHE_HANDLER = ({ removeUpstreamResponseHeader, cache, proxy }) => {
-  removeUpstreamResponseHeader('cache-control')
+export const EDGE_CACHE_HANDLER = ({ cache }) => {
   cache({
+    edge: {
+      maxAgeSeconds: 60 * 60 * 24,
+    },
     browser: {
-      maxAgeSeconds: 0,
       serviceWorkerSeconds: 60 * 60 * 24,
     },
-    edge: {
-      maxAgeSeconds: 60 * 60 * 24 * 365 * 10,
-      staleWhileRevalidateSeconds: 60 * 60 * 24,
-    },
   })
-  proxy('api', { path: 'images/:path*' })
 }
 
-export const SSR_CACHE_HANDLER = ({ removeUpstreamResponseHeader, cache }) => {
-  removeUpstreamResponseHeader('cache-control')
+export const STATIC_CACHE_CONFIG = {
+  browser: {
+    serviceWorkerSeconds: 60 * 60 * 24 * 365,
+  },
+  edge: {
+    maxAgeSeconds: 60 * 60 * 24 * 365,
+    forcePrivateCaching: true,
+  },
+}
+
+export const IMAGE_CACHE_HANDLER = ({ cache, proxy }) => {
   cache({
-    browser: false,
     edge: {
-      maxAgeSeconds: 60 * 60 * 24 * 365 * 10,
-      staleWhileRevalidateSeconds: 60 * 60 * 24,
+      maxAgeSeconds: 60 * 60,
+      // Cache responses even if they contain cache-control: private header
+      // https://docs.layer0.co/guides/caching#private
+      // https://docs.layer0.co/docs/api/core/interfaces/_router_cacheoptions_.edgecacheoptions.html#forceprivatecaching
+      forcePrivateCaching: true,
+    },
+    browser: {
+      // Don't save the response in the browser
+      maxAgeSeconds: 0,
+      // Save the response in the browser via Layer0 service worker
+      serviceWorkerSeconds: 60 * 60 * 24,
     },
   })
+  proxy('image', { path: '/' })
 }
