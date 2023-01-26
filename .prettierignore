@@ -1,0 +1,5 @@
+node_modules/
+.edgio
+dist
+.env
+.env*
